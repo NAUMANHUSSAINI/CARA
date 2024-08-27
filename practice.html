@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Course Table</title>
+  <style>
+    table {
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid black;
+      padding: 8px;
+    }
+    button {
+      margin-right: 5px;
+    }
+  </style>
+</head>
+<body>
+  <table id="courseTable">
+    <tr>
+      <th>Course Id</th>
+      <th>Course Name</th>
+      <th>Year Taken</th>
+    </tr>
+    <tr>
+      <td>1</td>
+      <td>Course A</td>
+      <td>2020</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Course B</td>
+      <td>2021</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Course C</td>
+      <td>2022</td>
+    </tr>
+    <tr>
+      <td>4</td>
+      <td>Course D</td>
+      <td>2023</td>
+    </tr>
+  </table>
+
+  <div id="buttonsDiv">
+    <button onclick="addNewCourse()">Add new Course</button>
+    <button onclick="updateCourse()">Update Course</button>
+    <button onclick="removeCourse()">Remove Course</button>
+  </div>
+
+  <script>
+    function addNewCourse() {
+      var table = document.getElementById("courseTable");
+      var newRow = table.insertRow(-1);
+      var cell1 = newRow.insertCell(0);
+      var cell2 = newRow.insertCell(1);
+      var cell3 = newRow.insertCell(2);
+      
+
+      cell1.innerHTML = "5";
+      cell2.innerHTML = "E";
+      cell3.innerHTML = "2024";
+    }
+    
+    function updateCourse() {
+      // Logic to update a course
+      alert("Update Course clicked");
+    }
+    
+    function removeCourse() {
+      // Logic to remove a course
+      alert("Remove Course clicked");
+    }
+  </script>
+</body>
+</html>
